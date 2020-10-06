@@ -5,12 +5,9 @@ import os
 import multiprocessing
 import re
 import subprocess
-from blibs.bldparse import bldParseArg
-from blibs.miRge_pckls_build import bld_novelmir
-from blibs.miRge_bowtie_build import bld_bowtie_index
-
-def novelmir(args, ann_path, fasta_path):
-    pass
+from mirge_build.blibs.bldparse import bldParseArg
+from mirge_build.blibs.miRge_pckls_build import bld_novelmir
+from mirge_build.blibs.miRge_bowtie_build import bld_bowtie_index
 
 def main():
     args = bldParseArg()
