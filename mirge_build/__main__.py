@@ -10,6 +10,7 @@ from mirge_build.blibs.miRge_pckls_build import bld_novelmir
 from mirge_build.blibs.miRge_bowtie_build import bld_bowtie_index
 
 def main():
+    globalstart = time.perf_counter()
     args = bldParseArg()
     # Checking bowtie version #
     bwtCommand = Path(args.bowtie_path)/"bowtie --version" if args.bowtie_path else "bowtie --version"
@@ -20,8 +21,7 @@ def main():
             print("bowtie error!: incorrect version. Require - bowtie (1.2.1, 1.2.2 or 1.2.3) \nUse argument -pbwt <name of the directory>")
             exit()
         else:
-            if not args.quiet:
-                print("bowtie version: "+ str(bowtie.stdout.split('\n')[0].split(' ')[2]))
+            print("\nbowtie version: "+ str(bowtie.stdout.split('\n')[0].split(' ')[2]))
     else:
         print("bowtie error!: bowtie, command not found \nUse argument -pbwt <name of the directory>")
         outlog.write("bowtie error!: bowtie, command not found \nUse argument -pbwt <name of the directory>\n")
@@ -46,7 +46,9 @@ def main():
     Path(Path(ann_path)/repeatElementFile).touch()
 
     # Bowtie build step 
-    bld_bowtie_index(args, str(index_path), bwtCommand)
+    print("\nLibrary indexing in progress... \n")
+    bwtCommand2 = Path(args.bowtie_path)/"bowtie-build " if args.bowtie_path else "bowtie-build "
+    bld_bowtie_index(args, str(index_path), str(bwtCommand2))
 
     temp_name = organism + "_mature_" + str(args.mir_DB)+".fa"
     temp_name_gff = organism + "_" +str(args.mir_DB)+".gff3"
@@ -58,6 +60,9 @@ def main():
     # Creating files relevant for novel miRNA prediction (Optional)
     if args.gen_repeats:
         bld_novelmir(args, str(ann_path), str(fasta_path))
+
+    globalend_time = time.perf_counter()
+    print(f'\nmiRge3.0-build is complete in {round(globalend_time-globalstart, 4)} second(s)\n')
 
 
 if __name__ == '__main__':

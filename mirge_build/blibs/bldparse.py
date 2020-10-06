@@ -5,7 +5,7 @@ import subprocess
 
 def bldParseArg():
     version = '3.0'
-    parser = argparse.ArgumentParser(description='miRge3-build (Enables building small-RNA libraries for organism of choice to use in miRge3.0 pipeline)',usage='miRge3-build [options]',formatter_class=argparse.RawTextHelpFormatter,)
+    parser = argparse.ArgumentParser(description='miRge3.0-build (Enables building small-RNA libraries for organism of choice to use in miRge3.0 pipeline)',usage='miRge3.0-build [options]',formatter_class=argparse.RawTextHelpFormatter,)
     if len(sys.argv) == 1:
         parser.print_help(sys.stderr)
         sys.exit(1)
@@ -38,6 +38,7 @@ def bldParseArg():
     group.add_argument('-mrf','--mrna', required=True, help=argparse.SUPPRESS)
     group.add_argument('-spnf','--spike-in', help=argparse.SUPPRESS)
     group.add_argument('-agff','--ann-gff', required=True, help=argparse.SUPPRESS)
+    group.add_argument('-ngrs','--gen-repeats', help=argparse.SUPPRESS)
     group.add_argument('-db', '--mir-DB', default='miRBase', required=True, help=argparse.SUPPRESS)
     group.add_argument('-on','--organism-name', required=True, help=argparse.SUPPRESS)
     group.add_argument('-cpu', '--threads', type=int, default='0', help=argparse.SUPPRESS)
