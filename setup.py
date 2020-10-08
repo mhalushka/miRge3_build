@@ -1,11 +1,11 @@
 from setuptools import setup, find_packages, find_namespace_packages
 
-with open("README.md", "r") as fh:
+with open("README.rst", "r") as fh:
     long_description = fh.read()
 
 setup(
         name='mirge3.0-build',
-        version='0.0.3',
+        version='0.0.4',
         author='Arun Patil and Marc Halushka',
         author_email='mhalush1@jhmi.edu',
         url='https://test.pypi.org/legacy/',
