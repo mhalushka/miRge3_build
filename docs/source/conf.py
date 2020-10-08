@@ -22,8 +22,8 @@ copyright = "2020, Arun Patil and Marc Halushka"
 author = "Arun Patil and Marc Halushka"
 
 # The full version, including alpha/beta/rc tags
-release = '0.0.3'
-
+release = '0.0.4'
+master_doc = 'index'
 
 # -- General configuration ---------------------------------------------------
 
@@ -69,5 +69,5 @@ html_context = {
         'display_github': True,
         'github_user': 'arunhpatil',
         'github_repo': 'miRge3_build',
-        'github_version': 'master/docs/source/',
+        'github_version': 'main/docs/source/',
     }
