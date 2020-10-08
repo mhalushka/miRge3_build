@@ -10,7 +10,15 @@ miRge3.0-build is developed and tested on Linux environment.
 Dependencies
 ------------
 
-miRge3.0-build installation requires `Python 3.8 or newer`
+* miRge3.0-build installation requires ``python 3.8 or newer``
+* `Bowtie v1.2.3 <https://sourceforge.net/projects/bowtie-bio/files/bowtie/1.2.3>`_ - please pick one based on your OS. \
+    - After downloading Bowtie, extract it (``unzip bowtie-1.2.3-linux-x86_64.zip``), \
+    - Change directory to bowtie ``cd bowtie-1.2.3-linux-x86_64`` and type ``pwd`` to get full path of the directory (pwd: present working directory). \
+    - Add that path to the environment PATH: ``export PATH=$PATH:"pwd <path> "``.  
+        + Example: ``export PATH=$PATH:"/home/user/software/bowtie-1.2.3-linux-x86_64"`` \
+* Requires scipy for enabling novel miRNA analysis ``python3.8 -m pip install --user scipy==1.4.1``
+* Requires scikit-learn for enabling novel miRNA analysis ``python3.8 -m pip install scikit-learn==0.23.1``
+* Requires biopython for parsing all input FASTA files ``python3.8 -m pip install biopython==1.77``
 
 
 Quick installation
@@ -22,9 +30,9 @@ If you have root previlages, then install miRge3.0-build as follows::
     
     sudo python3.8 -m pip install miRge3.0-build
 
-else::
+if you have only user previlages::
 
-    python3.8 -m pip install --user --upgrade miRge3.0-build
+    python3.8 -m pip install --user miRge3.0-build
 
 This will download the software from `PyPI (the Python packaging
 index) <https://pypi.python.org/pypi/miRge3.0-build/>`_, and

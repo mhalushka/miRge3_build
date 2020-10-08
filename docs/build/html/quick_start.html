@@ -1,0 +1,387 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="python" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>User guide &mdash; miRge3.0-build 0.0.3 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="MIT License" href="license.html" />
+    <link rel="prev" title="Installation" href="installation.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> miRge3.0-build
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">User guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#file-format-options">File format options</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#general-format-options">General format options</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#example-usage">Example usage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#name-of-the-database">Name of the database</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#name-of-the-organism">Name of the organism</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fasta-format">Fasta format</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#novel-mirna-options">Novel miRNA options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#custom-annotation-options">Custom annotation options</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#merges">_merges_</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mirnas-in-repetitive-element">_miRNAs_in_repetitive_element_</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#resources">Resources</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">MIT License</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">miRge3.0-build</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>User guide</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/quick_start.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="user-guide">
+<h1>User guide<a class="headerlink" href="#user-guide" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="parameters">
+<h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
+<p>To view command-line parameters type <code class="docutils literal notranslate"><span class="pre">miRge3.0-build</span> <span class="pre">-h</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    
+<span class="n">usage</span><span class="p">:</span> <span class="n">miRge3</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">build</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
+
+<span class="n">miRge3</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">build</span> <span class="p">(</span><span class="n">Enables</span> <span class="n">building</span> <span class="n">small</span><span class="o">-</span><span class="n">RNA</span> <span class="n">libraries</span> <span class="k">for</span> <span class="n">organism</span> <span class="n">of</span> <span class="n">choice</span> <span class="n">to</span> <span class="n">use</span> <span class="ow">in</span> <span class="n">miRge3</span><span class="o">.</span><span class="mi">0</span> <span class="n">pipeline</span><span class="p">)</span>
+<span class="n">optional</span> <span class="n">arguments</span><span class="p">:</span>
+  <span class="o">-</span><span class="n">h</span><span class="p">,</span> <span class="o">--</span><span class="n">help</span>  <span class="n">show</span> <span class="n">this</span> <span class="n">help</span> <span class="n">message</span> <span class="ow">and</span> <span class="n">exit</span>
+  <span class="o">--</span><span class="n">version</span>   <span class="n">show</span> <span class="n">program</span><span class="s1">&#39;s version number and exit</span>
+
+<span class="n">Options</span><span class="p">:</span>
+  <span class="o">-</span><span class="n">g</span><span class="p">,</span>     <span class="o">--</span><span class="n">genome</span>             <span class="n">genome</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">fasta</span> <span class="nb">format</span> <span class="p">(</span><span class="o">.</span><span class="n">fna</span><span class="p">,</span> <span class="o">.</span><span class="n">fasta</span> <span class="ow">or</span> <span class="o">.</span><span class="n">fa</span><span class="p">)</span> <span class="p">(</span><span class="n">Required</span><span class="p">)</span>
+  <span class="o">-</span><span class="n">mmf</span><span class="p">,</span>   <span class="o">--</span><span class="n">mature</span><span class="o">-</span><span class="n">mir</span>         <span class="n">mature</span> <span class="n">miRNA</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">fasta</span> <span class="nb">format</span> <span class="p">(</span><span class="n">Required</span><span class="p">)</span>
+  <span class="o">-</span><span class="n">hmf</span><span class="p">,</span>   <span class="o">--</span><span class="n">hpin</span><span class="o">-</span><span class="n">mir</span>           <span class="n">hairpin</span> <span class="n">miRNA</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">fasta</span> <span class="nb">format</span> <span class="p">(</span><span class="n">Required</span><span class="p">)</span>
+  <span class="o">-</span><span class="n">mtf</span><span class="p">,</span>   <span class="o">--</span><span class="n">mature</span><span class="o">-</span><span class="n">trna</span>        <span class="n">mature</span> <span class="n">tRNA</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">fasta</span> <span class="nb">format</span> <span class="p">(</span><span class="n">Required</span><span class="p">)</span>
+  <span class="o">-</span><span class="n">ptf</span><span class="p">,</span>   <span class="o">--</span><span class="n">pre</span><span class="o">-</span><span class="n">trna</span>           <span class="n">precursor</span> <span class="n">tRNA</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">fasta</span> <span class="nb">format</span> <span class="p">(</span><span class="n">Required</span><span class="p">)</span>
+  <span class="o">-</span><span class="n">snorf</span><span class="p">,</span> <span class="o">--</span><span class="n">snorna</span>             <span class="n">snoRNA</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">fasta</span> <span class="nb">format</span> <span class="p">(</span><span class="n">Required</span><span class="p">)</span>
+  <span class="o">-</span><span class="n">rrf</span><span class="p">,</span>   <span class="o">--</span><span class="n">rrna</span>               <span class="n">rRNA</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">fasta</span> <span class="nb">format</span> <span class="p">(</span><span class="n">Required</span><span class="p">)</span>
+  <span class="o">-</span><span class="n">ncof</span><span class="p">,</span>  <span class="o">--</span><span class="n">ncrna</span><span class="o">-</span><span class="n">other</span>        <span class="nb">all</span> <span class="n">other</span> <span class="n">non</span><span class="o">-</span><span class="n">coding</span> <span class="n">RNA</span> <span class="ow">in</span> <span class="n">fasta</span> <span class="nb">format</span> <span class="p">(</span><span class="n">Required</span><span class="p">)</span>
+  <span class="o">-</span><span class="n">mrf</span><span class="p">,</span>   <span class="o">--</span><span class="n">mrna</span>               <span class="n">mRNA</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">fasta</span> <span class="nb">format</span> <span class="p">(</span><span class="n">Required</span><span class="p">)</span>
+  <span class="o">-</span><span class="n">spnf</span><span class="p">,</span>  <span class="o">--</span><span class="n">spike</span><span class="o">-</span><span class="ow">in</span>           <span class="n">user</span> <span class="n">defined</span> <span class="n">custom</span> <span class="n">spike</span><span class="o">-</span><span class="ow">in</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">fasta</span> <span class="nb">format</span> <span class="p">(</span><span class="n">Optional</span><span class="p">)</span>
+  <span class="o">-</span><span class="n">agff</span><span class="p">,</span>  <span class="o">--</span><span class="n">ann</span><span class="o">-</span><span class="n">gff</span>            <span class="n">miRNA</span> <span class="n">annotation</span> <span class="n">gff</span> <span class="n">file</span> <span class="p">(</span><span class="n">Required</span><span class="p">)</span>
+  <span class="o">-</span><span class="n">ngrs</span><span class="p">,</span>  <span class="o">--</span><span class="n">gen</span><span class="o">-</span><span class="n">repeats</span>        <span class="n">the</span> <span class="n">genome</span> <span class="n">repeats</span> <span class="n">file</span> <span class="k">with</span> <span class="o">.</span><span class="n">gtf</span> <span class="n">extension</span> <span class="p">(</span><span class="n">Optional</span><span class="p">:</span> <span class="n">output</span> <span class="n">however</span> <span class="n">enables</span> <span class="n">novel</span> <span class="n">miRNA</span> <span class="n">prediction</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">miRge3</span><span class="o">.</span><span class="mi">0</span> <span class="n">pipeline</span><span class="p">)</span>
+  <span class="o">-</span><span class="n">db</span><span class="p">,</span>    <span class="o">--</span><span class="n">mir</span><span class="o">-</span><span class="n">DB</span>             <span class="n">name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">database</span> <span class="n">to</span> <span class="n">be</span> <span class="n">used</span> <span class="p">(</span><span class="n">Options</span><span class="p">:</span> <span class="n">miRBase</span><span class="p">,</span> <span class="n">miRGeneDB</span><span class="p">)</span> <span class="p">(</span><span class="n">Required</span><span class="p">)</span>
+  <span class="o">-</span><span class="n">on</span><span class="p">,</span>    <span class="o">--</span><span class="n">organism</span><span class="o">-</span><span class="n">name</span>      <span class="n">name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">organism</span> <span class="p">[</span><span class="n">Note</span><span class="p">:</span> <span class="n">name</span> <span class="n">should</span> <span class="n">be</span> <span class="n">one</span> <span class="n">word</span> <span class="ow">and</span> <span class="n">use</span> <span class="s2">&quot;_&quot;</span> <span class="k">as</span> <span class="n">separator</span> <span class="k">if</span> <span class="n">necessary</span><span class="p">]</span> <span class="p">(</span><span class="n">Required</span><span class="p">)</span>
+  <span class="o">-</span><span class="n">cpu</span><span class="p">,</span>   <span class="o">--</span><span class="n">threads</span>            <span class="n">the</span> <span class="n">number</span> <span class="n">of</span> <span class="n">processors</span> <span class="n">to</span> <span class="n">use</span> <span class="k">for</span> <span class="n">trimming</span><span class="p">,</span> <span class="n">qc</span><span class="p">,</span> <span class="ow">and</span> <span class="n">alignment</span> <span class="p">(</span><span class="n">Default</span><span class="p">:</span> <span class="mi">1</span><span class="p">)</span>
+  <span class="o">-</span><span class="n">pbwt</span><span class="p">,</span>  <span class="o">--</span><span class="n">bowtie</span><span class="o">-</span><span class="n">path</span>        <span class="n">path</span> <span class="n">to</span> <span class="n">system</span><span class="s1">&#39;s directory containing bowtie binary (Required if bowtie is not in the environment path)</span>
+  
+</pre></div>
+</div>
+</div>
+<div class="section" id="file-format-options">
+<h2>File format options<a class="headerlink" href="#file-format-options" title="Permalink to this headline">¶</a></h2>
+<p>Having the right file format is important before making miRge3.0 libraries. When dealing with new species which is not available in the set of miRge3.0 libraries, it is important to prioritize what is essential. In other words, general format options is straight forward and faster to build libraries. Novel miRNAs runs scipy cKDTree during library preparation and it consumes lot of computational resources and time.</p>
+<div class="section" id="general-format-options">
+<h3>General format options<a class="headerlink" href="#general-format-options" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="example-usage">
+<h4>Example usage<a class="headerlink" href="#example-usage" title="Permalink to this headline">¶</a></h4>
+<p>Example command usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">miRge3</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">build</span> <span class="o">-</span><span class="n">g</span> <span class="n">genome</span><span class="o">.</span><span class="n">fasta</span> <span class="o">-</span><span class="n">mmf</span> <span class="n">nematode_mature_miRBase</span><span class="o">.</span><span class="n">fa</span> <span class="o">-</span><span class="n">hmf</span> <span class="n">hairpin_miR</span><span class="o">.</span><span class="n">fa</span> <span class="o">-</span><span class="n">mtf</span> <span class="n">mature_trna</span><span class="o">.</span><span class="n">fasta</span> <span class="o">-</span><span class="n">ptf</span> <span class="n">pre_trna</span><span class="o">.</span><span class="n">fasta</span> <span class="o">-</span><span class="n">snorf</span> <span class="n">snorna</span><span class="o">.</span><span class="n">fasta</span> <span class="o">-</span><span class="n">rrf</span> <span class="n">rrna</span><span class="o">.</span><span class="n">fasta</span> <span class="o">-</span><span class="n">ncof</span> <span class="n">ncrna_other</span><span class="o">.</span><span class="n">fasta</span> <span class="o">-</span><span class="n">mrf</span> <span class="n">mrna</span><span class="o">.</span><span class="n">fasta</span> <span class="o">-</span><span class="n">agff</span> <span class="n">nematode_miRBase</span><span class="o">.</span><span class="n">gff3</span> <span class="o">-</span><span class="n">db</span> <span class="n">miRBase</span> <span class="o">-</span><span class="n">on</span> <span class="n">roundworm</span> <span class="o">-</span><span class="n">cpu</span> <span class="mi">10</span>  <span class="o">-</span><span class="n">ngrs</span> <span class="n">WBcel235_genome_repeats</span><span class="o">.</span><span class="n">GTF</span>
+</pre></div>
+</div>
+<p>Output command line:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bowtie</span> <span class="n">version</span><span class="p">:</span> <span class="mf">1.2</span><span class="o">.</span><span class="mi">3</span>
+
+<span class="n">Library</span> <span class="n">indexing</span> <span class="ow">in</span> <span class="n">progress</span><span class="o">...</span>
+
+<span class="n">Building</span> <span class="n">the</span> <span class="n">kdTree</span> <span class="n">of</span> <span class="n">roundworm_genome_repeats</span><span class="o">.</span><span class="n">GTF</span><span class="o">....</span>
+
+<span class="n">Building</span> <span class="n">the</span> <span class="n">kdTree</span> <span class="n">of</span> <span class="n">roundworm_genome_repeats</span><span class="o">.</span><span class="n">GTFtakes</span><span class="p">:</span> <span class="mf">1.4</span><span class="n">s</span>
+<span class="n">Transforming</span> <span class="n">roundworm_genome</span><span class="o">.</span><span class="n">fa</span> <span class="n">takes</span><span class="p">:</span> <span class="mf">0.9</span><span class="n">s</span>
+
+<span class="n">miRge3</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">build</span> <span class="ow">is</span> <span class="n">complete</span> <span class="ow">in</span> <span class="mf">108.2122</span> <span class="n">second</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Output directory structure:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>DB = &#39;--mir-DB&#39;; name of the database used (miRBase or miRGeneDB)
+
+Organism
+├── annotation.Libs
+│   ├── organism_DB.gff3
+│   ├── organism_genome_repeats.pckl (if `-ngrs` is opted)
+│   ├── organism_miRNAs_in_repetitive_element_DB.csv (if `-ngrs` is opted)
+│   └── organism_merges_DB.csv
+├── fasta.Libs
+│   ├── organism_genome.pckl (if `-ngrs` is opted) 
+│   └── organism_merges_DB.fa
+└── index.Libs
+    ├── organism_genome*.ebwt
+    ├── organism_hairpin_DB*.ebwt
+    ├── organism_mirna_DB*.ebwt
+    ├── organism_mature_trna*.ebwt
+    ├── organism_pre_trna*.ebwt
+    ├── organism_rrna*.ebwt
+    ├── organism_snorna*.ebwt
+    ├── organism_mrna*.ebwt
+    ├── organism_ncrna_others*.ebwt
+    ├── organism_mature_trna*.ebwt
+    └── organism_spike-in*.ebwt (Optional)
+</pre></div>
+</div>
+</div>
+<div class="section" id="name-of-the-database">
+<h4>Name of the database<a class="headerlink" href="#name-of-the-database" title="Permalink to this headline">¶</a></h4>
+<p>miRge3.0 uses miRBase or miRGeneDB as the reference database.
+So, it is mandatory to use <code class="docutils literal notranslate"><span class="pre">-db</span></code> option to either <code class="docutils literal notranslate"><span class="pre">-db</span> <span class="pre">miRBase</span></code> or <code class="docutils literal notranslate"><span class="pre">-db</span> <span class="pre">miRGeneDB</span></code>. Reference miRNA database <code class="docutils literal notranslate"><span class="pre">-db</span></code> and annotation GFF <code class="docutils literal notranslate"><span class="pre">-agff</span></code> files can be found at <a class="reference external" href="https://mirgenedb.org/">miRGeneDB</a> and <a class="reference external" href="http://www.mirbase.org/">miRBase</a>.</p>
+</div>
+<div class="section" id="name-of-the-organism">
+<h4>Name of the organism<a class="headerlink" href="#name-of-the-organism" title="Permalink to this headline">¶</a></h4>
+<p>miRge3.0-build creats and store all the libraries under the folder which is named after the organism. It is recommended to use a simple name and avoid any special character (use &quot;_&quot; if the name needs to be seperated by space). Example: <code class="docutils literal notranslate"><span class="pre">-on</span> <span class="pre">human</span></code>; <code class="docutils literal notranslate"><span class="pre">-on</span> <span class="pre">horse</span></code>; <code class="docutils literal notranslate"><span class="pre">-on</span> <span class="pre">donkey</span></code>; <code class="docutils literal notranslate"><span class="pre">-on</span> <span class="pre">my_database</span></code> etc.</p>
+</div>
+<div class="section" id="fasta-format">
+<h4>Fasta format<a class="headerlink" href="#fasta-format" title="Permalink to this headline">¶</a></h4>
+<p>Parameters with <code class="docutils literal notranslate"><span class="pre">-g</span></code>, <code class="docutils literal notranslate"><span class="pre">-mmf</span></code>, <code class="docutils literal notranslate"><span class="pre">-hmf</span></code>, <code class="docutils literal notranslate"><span class="pre">-mtf</span></code>, <code class="docutils literal notranslate"><span class="pre">-ptf</span></code>, <code class="docutils literal notranslate"><span class="pre">-snorf</span></code>, <code class="docutils literal notranslate"><span class="pre">-mrf</span></code>, <code class="docutils literal notranslate"><span class="pre">-spnf</span></code> should be in FASTA format as shown below. <code class="docutils literal notranslate"><span class="pre">-spnf</span> </code> or --spike-in is optional if the user is interested in adding additional database with spike-in reads.</p>
+<p><em>FASTA Format:</em></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="n">Header</span> <span class="ow">or</span> <span class="n">Identifier</span>
+<span class="n">NUCLEOTIDE</span> <span class="n">SEQUENCE</span> 
+<span class="n">Ex</span><span class="p">:</span>
+  <span class="o">&gt;</span><span class="n">hsa</span><span class="o">-</span><span class="n">let</span><span class="o">-</span><span class="mi">7</span><span class="n">a</span><span class="o">-</span><span class="mi">5</span><span class="n">p</span>
+  <span class="n">TGAGGTAGTAGGTTGTATAGTT</span>
+</pre></div>
+</div>
+<p><strong>NOTE:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">Header</span> <span class="n">ID</span> <span class="n">of</span> <span class="n">hairpin</span> <span class="n">miRNA</span> <span class="n">fasta</span> <span class="n">should</span> <span class="n">match</span> <span class="n">mature</span> <span class="n">miRNA</span> <span class="n">fasta</span> <span class="n">file</span><span class="o">.</span> <span class="n">This</span> <span class="ow">is</span> <span class="n">required</span> <span class="k">for</span> <span class="n">accurate</span> <span class="n">isomiR</span> <span class="n">annotation</span><span class="o">.</span> 
+<span class="n">miRge3</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">build</span> <span class="n">fetches</span> <span class="mi">2</span><span class="n">bp</span> <span class="n">upstream</span> <span class="n">to</span> <span class="mi">5</span><span class="n">p</span> <span class="ow">and</span> <span class="mi">6</span><span class="n">bp</span> <span class="n">downstream</span> <span class="n">to</span> <span class="mi">3</span><span class="n">p</span> <span class="n">mature</span> <span class="n">miRNA</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">hairpin</span> <span class="n">miRNA</span> <span class="n">based</span> <span class="n">on</span> <span class="n">the</span> <span class="n">matching</span> <span class="n">ID</span><span class="o">.</span> 
+<span class="ne">Exception</span><span class="p">:</span> <span class="n">If</span> <span class="n">the</span> <span class="n">mature</span> <span class="n">miRNA</span> <span class="n">name</span> <span class="n">contains</span> <span class="n">XXXX</span><span class="o">-</span><span class="mi">5</span><span class="n">p</span><span class="p">,</span> <span class="n">XXXX</span><span class="o">-</span><span class="mi">3</span><span class="n">p</span><span class="p">,</span> <span class="n">XXXX</span><span class="o">-</span><span class="p">[</span><span class="mi">5</span><span class="o">|</span><span class="mi">3</span><span class="p">]</span><span class="n">p</span><span class="o">*</span><span class="p">,</span>  <span class="n">XXXX_5p</span> <span class="ow">or</span> <span class="n">XXXX_3p</span> <span class="n">where</span> <span class="n">XXXX</span> <span class="n">matches</span> <span class="n">the</span> <span class="n">hairpin</span> <span class="n">miRNA</span> <span class="n">ID</span><span class="o">.</span> 
+<span class="n">Also</span><span class="p">,</span> <span class="k">if</span> <span class="n">this</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">possible</span><span class="p">,</span> <span class="n">miRge3</span><span class="o">.</span><span class="mi">0</span> <span class="n">will</span> <span class="ow">not</span> <span class="n">throw</span> <span class="nb">any</span> <span class="n">errors</span><span class="p">,</span> <span class="n">however</span><span class="p">,</span> <span class="n">proceed</span> <span class="k">with</span> <span class="n">the</span> <span class="n">user</span> <span class="n">provided</span> <span class="n">files</span><span class="o">.</span>  
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="novel-mirna-options">
+<h3>Novel miRNA options<a class="headerlink" href="#novel-mirna-options" title="Permalink to this headline">¶</a></h3>
+<p>Novel miRNA prediction requires genome file (which is provided in the general format) and genome repeats file in GTF format, <code class="docutils literal notranslate"><span class="pre">-ngrs</span></code>. As mentioned previously, novel miRNA analysis consumes lot of computational resources and time.</p>
+</div>
+<div class="section" id="custom-annotation-options">
+<h3>Custom annotation options<a class="headerlink" href="#custom-annotation-options" title="Permalink to this headline">¶</a></h3>
+<p>This is <strong>optional</strong>, that two files under the <code class="docutils literal notranslate"><span class="pre">annotation.Libs</span></code> subdirectory requires users input manually.</p>
+<div class="section" id="merges">
+<h4>_merges_<a class="headerlink" href="#merges" title="Permalink to this headline">¶</a></h4>
+<p>This file structured as <code class="docutils literal notranslate"><span class="pre">organism_merges_database.csv</span></code> file allows users to define miRNA family for miRNA with similar sequence.
+Below is the guide to format the file, where <code class="docutils literal notranslate"><span class="pre">hsa-miR-376b-5p/376c-5p</span></code> is the name of the miRNA family seperated by <code class="docutils literal notranslate"><span class="pre">/</span></code> followed by the family members such as <code class="docutils literal notranslate"><span class="pre">hsa-miR-376b-5p</span></code> and <code class="docutils literal notranslate"><span class="pre">hsa-miR-376c-5p</span></code> all seperated by <code class="docutils literal notranslate"><span class="pre">,</span></code>. Next such miRNA family should begin in a new line. Here, four such example is shown below.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">hsa</span><span class="o">-</span><span class="n">miR</span><span class="o">-</span><span class="mi">376</span><span class="n">b</span><span class="o">-</span><span class="mi">5</span><span class="n">p</span><span class="o">/</span><span class="mi">376</span><span class="n">c</span><span class="o">-</span><span class="mi">5</span><span class="n">p</span><span class="p">,</span><span class="n">hsa</span><span class="o">-</span><span class="n">miR</span><span class="o">-</span><span class="mi">376</span><span class="n">b</span><span class="o">-</span><span class="mi">5</span><span class="n">p</span><span class="p">,</span><span class="n">hsa</span><span class="o">-</span><span class="n">miR</span><span class="o">-</span><span class="mi">376</span><span class="n">c</span><span class="o">-</span><span class="mi">5</span><span class="n">p</span>
+<span class="n">hsa</span><span class="o">-</span><span class="n">miR</span><span class="o">-</span><span class="mi">518</span><span class="n">c</span><span class="o">-</span><span class="mi">3</span><span class="n">p</span><span class="o">/</span><span class="mi">518</span><span class="n">f</span><span class="o">-</span><span class="mi">3</span><span class="n">p</span><span class="p">,</span><span class="n">hsa</span><span class="o">-</span><span class="n">miR</span><span class="o">-</span><span class="mi">518</span><span class="n">c</span><span class="o">-</span><span class="mi">3</span><span class="n">p</span><span class="p">,</span><span class="n">hsa</span><span class="o">-</span><span class="n">miR</span><span class="o">-</span><span class="mi">518</span><span class="n">f</span><span class="o">-</span><span class="mi">3</span><span class="n">p</span>
+<span class="n">hsa</span><span class="o">-</span><span class="n">miR</span><span class="o">-</span><span class="mi">642</span><span class="n">a</span><span class="o">-</span><span class="mi">3</span><span class="n">p</span><span class="o">/</span><span class="mi">642</span><span class="n">b</span><span class="o">-</span><span class="mi">3</span><span class="n">p</span><span class="p">,</span><span class="n">hsa</span><span class="o">-</span><span class="n">miR</span><span class="o">-</span><span class="mi">642</span><span class="n">a</span><span class="o">-</span><span class="mi">3</span><span class="n">p</span><span class="p">,</span><span class="n">hsa</span><span class="o">-</span><span class="n">miR</span><span class="o">-</span><span class="mi">642</span><span class="n">b</span><span class="o">-</span><span class="mi">3</span><span class="n">p</span>
+<span class="n">hsa</span><span class="o">-</span><span class="n">miR</span><span class="o">-</span><span class="mi">3155</span><span class="n">a</span><span class="o">-</span><span class="mi">3</span><span class="n">p</span><span class="o">/</span><span class="mi">3155</span><span class="n">b</span><span class="p">,</span><span class="n">hsa</span><span class="o">-</span><span class="n">miR</span><span class="o">-</span><span class="mi">3155</span><span class="n">a</span><span class="o">-</span><span class="mi">3</span><span class="n">p</span><span class="p">,</span><span class="n">hsa</span><span class="o">-</span><span class="n">miR</span><span class="o">-</span><span class="mi">3155</span><span class="n">b</span>
+<span class="n">hsa</span><span class="o">-</span><span class="n">miR</span><span class="o">-</span><span class="mi">3689</span><span class="n">b</span><span class="o">-</span><span class="mi">3</span><span class="n">p</span><span class="o">/</span><span class="mi">3689</span><span class="n">c</span><span class="p">,</span><span class="n">hsa</span><span class="o">-</span><span class="n">miR</span><span class="o">-</span><span class="mi">3689</span><span class="n">b</span><span class="o">-</span><span class="mi">3</span><span class="n">p</span><span class="p">,</span><span class="n">hsa</span><span class="o">-</span><span class="n">miR</span><span class="o">-</span><span class="mi">3689</span><span class="n">c</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="mirnas-in-repetitive-element">
+<h4>_miRNAs_in_repetitive_element_<a class="headerlink" href="#mirnas-in-repetitive-element" title="Permalink to this headline">¶</a></h4>
+<p>This file structured as <code class="docutils literal notranslate"><span class="pre">organism_miRNAs_in_repetitive_element_database.csv</span></code> file allows users to define miRNA that overlap with repeate elements in the genome. This eliminates miRNA reads to be identified as novel miRNAs or identifying one as A-to-I editing, both of which might be misleading.</p>
+<p>Below is the guide to format the file, where miRNA name which overlaps with repeate elements are seperated by <code class="docutils literal notranslate"><span class="pre">,</span></code>. The <code class="docutils literal notranslate"><span class="pre">gene_id</span></code> and <code class="docutils literal notranslate"><span class="pre">transcript_id</span></code> of a repeate element should follow the miRNA name. See the example below:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">hsa</span><span class="o">-</span><span class="n">miR</span><span class="o">-</span><span class="mi">28</span><span class="o">-</span><span class="mi">5</span><span class="n">p</span><span class="p">,</span><span class="n">gene_id</span> <span class="s2">&quot;L2c&quot;</span><span class="p">;</span> <span class="n">transcript_id</span> <span class="s2">&quot;L2c_dup8856&quot;</span><span class="p">;</span>
+<span class="n">hsa</span><span class="o">-</span><span class="n">miR</span><span class="o">-</span><span class="mi">28</span><span class="o">-</span><span class="mi">3</span><span class="n">p</span><span class="p">,</span><span class="n">gene_id</span> <span class="s2">&quot;L2c&quot;</span><span class="p">;</span> <span class="n">transcript_id</span> <span class="s2">&quot;L2c_dup8856&quot;</span><span class="p">;</span>
+<span class="n">hsa</span><span class="o">-</span><span class="n">miR</span><span class="o">-</span><span class="mi">95</span><span class="o">-</span><span class="mi">5</span><span class="n">p</span><span class="p">,</span><span class="n">gene_id</span> <span class="s2">&quot;L2c&quot;</span><span class="p">;</span> <span class="n">transcript_id</span> <span class="s2">&quot;L2c_dup382&quot;</span><span class="p">;</span>
+<span class="n">hsa</span><span class="o">-</span><span class="n">miR</span><span class="o">-</span><span class="mi">95</span><span class="o">-</span><span class="mi">3</span><span class="n">p</span><span class="p">,</span><span class="n">gene_id</span> <span class="s2">&quot;L2b&quot;</span><span class="p">;</span> <span class="n">transcript_id</span> <span class="s2">&quot;L2b_dup437&quot;</span><span class="p">;</span>
+<span class="n">hsa</span><span class="o">-</span><span class="n">miR</span><span class="o">-</span><span class="mi">181</span><span class="n">c</span><span class="o">-</span><span class="mi">5</span><span class="n">p</span><span class="p">,</span><span class="n">gene_id</span> <span class="s2">&quot;MamRTE1&quot;</span><span class="p">;</span> <span class="n">transcript_id</span> <span class="s2">&quot;MamRTE1_dup11&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="resources">
+<h3>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>The genome repeats can be obtained from <a class="reference external" href="https://genome-euro.ucsc.edu/cgi-bin/hgTables">UCSC</a></p></li>
+<li><p>The database sequences for other small RNA could be obtained from <a class="reference external" href="https://genome-euro.ucsc.edu/cgi-bin/hgTables">UCSC</a> or <a class="reference external" href="http://uswest.ensembl.org/Homo_sapiens/Info/Index">Ensembl</a></p></li>
+<li><p><a class="reference external" href="https://sourceforge.net/projects/bowtie-bio/files/bowtie/1.2.3">Bowtie-v1.2.3</a> - please pick one based on your OS.</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="license.html" class="btn btn-neutral float-right" title="MIT License" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="installation.html" class="btn btn-neutral float-left" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Arun Patil and Marc Halushka
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

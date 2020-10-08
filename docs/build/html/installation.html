@@ -1,44 +1,188 @@
 
-<!DOCTYPE html>
 
-<html lang="python">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Installation &#8212; miRge3.0-build 0.0.3 documentation</title>
-    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
+<!DOCTYPE html>
+<html class="writer-html5" lang="python" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Installation &mdash; miRge3.0-build 0.0.3 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Guide" href="guide.html" />
-    <link rel="prev" title="miRge3.0-build" href="index.html" />
+    <link rel="next" title="User guide" href="quick_start.html" />
+    <link rel="prev" title="miRge3.0-build" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
    
-  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
-
-  </head><body>
-  
-
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
           
 
-          <div class="body" role="main">
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> miRge3.0-build
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#dependencies">Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#quick-installation">Quick installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installation-with-conda">Installation with conda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#uninstalling">Uninstalling</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="quick_start.html">User guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">MIT License</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">miRge3.0-build</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Installation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/installation.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
             
   <div class="section" id="installation">
 <h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
 <p>miRge3.0-build is developed and tested on Linux environment.</p>
 <div class="section" id="dependencies">
 <span id="id1"></span><h2>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">¶</a></h2>
-<p>miRge3.0-build installation requires <cite>Python 3.8 or newer</cite></p>
+<ul class="simple">
+<li><p>miRge3.0-build installation requires <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">3.8</span> <span class="pre">or</span> <span class="pre">newer</span></code></p></li>
+<li><dl class="simple">
+<dt><a class="reference external" href="https://sourceforge.net/projects/bowtie-bio/files/bowtie/1.2.3">Bowtie v1.2.3</a> - please pick one based on your OS. </dt><dd><ul>
+<li><p>After downloading Bowtie, extract it (<code class="docutils literal notranslate"><span class="pre">unzip</span> <span class="pre">bowtie-1.2.3-linux-x86_64.zip</span></code>), </p></li>
+<li><p>Change directory to bowtie <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">bowtie-1.2.3-linux-x86_64</span></code> and type <code class="docutils literal notranslate"><span class="pre">pwd</span></code> to get full path of the directory (pwd: present working directory). </p></li>
+<li><dl class="simple">
+<dt>Add that path to the environment PATH: <code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">PATH=$PATH:&quot;pwd</span> <span class="pre">&lt;path&gt;</span> <span class="pre">&quot;</span></code>.</dt><dd><ul>
+<li><p>Example: <code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">PATH=$PATH:&quot;/home/user/software/bowtie-1.2.3-linux-x86_64&quot;</span></code> </p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Requires scipy for enabling novel miRNA analysis <code class="docutils literal notranslate"><span class="pre">python3.8</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">--user</span> <span class="pre">scipy==1.4.1</span></code></p></li>
+<li><p>Requires scikit-learn for enabling novel miRNA analysis <code class="docutils literal notranslate"><span class="pre">python3.8</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">scikit-learn==0.23.1</span></code></p></li>
+<li><p>Requires biopython for parsing all input FASTA files <code class="docutils literal notranslate"><span class="pre">python3.8</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">biopython==1.77</span></code></p></li>
+</ul>
 </div>
 <div class="section" id="quick-installation">
 <h2>Quick installation<a class="headerlink" href="#quick-installation" title="Permalink to this headline">¶</a></h2>
@@ -47,8 +191,8 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">python3</span><span class="o">.</span><span class="mi">8</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">miRge3</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">build</span>
 </pre></div>
 </div>
-<p>else:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span><span class="o">.</span><span class="mi">8</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">user</span> <span class="o">--</span><span class="n">upgrade</span> <span class="n">miRge3</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">build</span>
+<p>if you have only user previlages:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span><span class="o">.</span><span class="mi">8</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">user</span> <span class="n">miRge3</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">build</span>
 </pre></div>
 </div>
 <p>This will download the software from <a class="reference external" href="https://pypi.python.org/pypi/miRge3.0-build/">PyPI (the Python packaging
@@ -76,79 +220,59 @@ to install a newer version. You can then run the program like this:</p>
 </div>
 
 
+           </div>
+           
           </div>
-          
-        </div>
-      </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="index.html">miRge3.0-build</a></h1>
-
-
-
-
-
-
-
-
-<h3>Navigation</h3>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#dependencies">Dependencies</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#quick-installation">Quick installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#installation-with-conda">Installation with conda</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#uninstalling">Uninstalling</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="guide.html">Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="license.html">MIT License</a></li>
-</ul>
-
-<div class="relations">
-<h3>Related Topics</h3>
-<ul>
-  <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="index.html" title="previous chapter">miRge3.0-build</a></li>
-      <li>Next: <a href="guide.html" title="next chapter">Guide</a></li>
-  </ul></li>
-</ul>
-</div>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="quick_start.html" class="btn btn-neutral float-right" title="User guide" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="miRge3.0-build" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
     </div>
-</div>
-<script>$('#searchbox').show(0);</script>
+  
 
+  <hr/>
 
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Arun Patil and Marc Halushka
 
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
-
-
-
+</footer>
 
         </div>
       </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="footer">
-      &copy;2020, Arun Patil and Marc Halushka.
-      
-      |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.1</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
-      
-      |
-      <a href="_sources/installation.rst.txt"
-          rel="nofollow">Page source</a>
-    </div>
 
-    
+    </section>
 
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
     
-  </body>
+   
+
+</body>
 </html>

@@ -6,16 +6,9 @@ Table of contents
 
 .. toctree::
    :maxdepth: 2
-
+   
    installation
-   guide
+   quick_start.md
    license
 
 
-..
-   Indices and tables
-   ==================
-
-   * :ref:`genindex`
-   * :ref:`modindex`
-   * :ref:`search`
