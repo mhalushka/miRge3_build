@@ -24,23 +24,23 @@ Dependencies
 Quick installation
 ------------------
 
-The easiest way to install miRge3.0-build is to use ``pip3`` on the command line:
+The easiest way to install miRge-build is to use ``pip3`` on the command line:
 
-If you have root previlages, then install miRge3.0-build as follows::
+If you have root previlages, then install miRge-build as follows::
     
-    sudo python3.8 -m pip install miRge3.0-build
+    sudo python3.8 -m pip install miRge-build
 
 if you have only user previlages::
 
-    python3.8 -m pip install --user miRge3.0-build
+    python3.8 -m pip install --user miRge-build
 
 This will download the software from `PyPI (the Python packaging
-index) <https://pypi.python.org/pypi/miRge3.0-build/>`_, and
-install the miRge3.0-build binary into ``$HOME/.local/bin``. If an old version of
-miRge3.0-build exists on your system, the ``--upgrade`` parameter is required in order
+index) <https://pypi.python.org/pypi/miRge-build/>`_, and
+install the miRge-build binary into ``$HOME/.local/bin``. If an old version of
+miRge-build exists on your system, the ``--upgrade`` parameter is required in order
 to install a newer version. You can then run the program like this::
 
-    ~/.local/bin/miRge3.0-build --help
+    ~/.local/bin/miRge-build --help
 
 If you want to avoid typing the full path, add the directory
 ``$HOME/.local/bin`` to your ``$PATH`` environment variable.
@@ -56,4 +56,4 @@ Uninstalling
 
 To uninstall type::
 
-    pip uninstall miRge3.0-build
+    pip uninstall miRge-build

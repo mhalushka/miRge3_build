@@ -17,7 +17,7 @@
 import sphinx_rtd_theme
 # -- Project information -----------------------------------------------------
 
-project = 'miRge3.0-build'
+project = 'miRge-build'
 copyright = "2020, Arun Patil and Marc Halushka"
 author = "Arun Patil and Marc Halushka"
 

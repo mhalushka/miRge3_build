@@ -5,7 +5,7 @@ import subprocess
 
 def bldParseArg():
     version = '3.0'
-    parser = argparse.ArgumentParser(description='miRge3.0-build (Enables building small-RNA libraries for organism of choice to use in miRge3.0 pipeline)',usage='miRge3.0-build [options]',formatter_class=argparse.RawTextHelpFormatter,)
+    parser = argparse.ArgumentParser(description='miRge-build (Enables building small-RNA libraries for organism of choice to use in miRge3.0 pipeline)',usage='miRge-build [options]',formatter_class=argparse.RawTextHelpFormatter,)
     if len(sys.argv) == 1:
         parser.print_help(sys.stderr)
         sys.exit(1)
