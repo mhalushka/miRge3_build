@@ -2,7 +2,7 @@
 Installation
 ============
 
-miRge3.0-build is developed and tested on Linux environment. 
+miRge-build is developed and tested on Linux environment. 
 
 
 .. _dependencies:
@@ -10,7 +10,7 @@ miRge3.0-build is developed and tested on Linux environment.
 Dependencies
 ------------
 
-* miRge3.0-build installation requires ``python 3.8 or newer``
+* miRge-build installation requires ``python 3.8 or newer``
 * `Bowtie v1.2.3 <https://sourceforge.net/projects/bowtie-bio/files/bowtie/1.2.3>`_ - please pick one based on your OS. \
     - After downloading Bowtie, extract it (``unzip bowtie-1.2.3-linux-x86_64.zip``), \
     - Change directory to bowtie ``cd bowtie-1.2.3-linux-x86_64`` and type ``pwd`` to get full path of the directory (pwd: present working directory). \
