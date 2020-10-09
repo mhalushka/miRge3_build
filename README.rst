@@ -15,14 +15,7 @@ If you use miRge-build, please cite
 Links
 -----
 
-<<<<<<< HEAD
 * `Documentation <https://mirge-build.readthedocs.io/>`_
 * `Source code <https://github.com/arunhpatil/miRge3_build/>`_
 * `Report an issue <https://github.com/arunhpatil/miRge3_build/issues>`_
 * `Project page on PyPI (Python package index) <https://pypi.python.org/pypi/miRge-build/>`_
-=======
-* `Documentation <https://miRge-build.readthedocs.io/>`_
-* `Source code <https://github.com/arunhpatil/miRge3_build>`_
-* `Report an issue <https://github.com/arunhpatil/miRge3_build/issues>`_
-* `Project page on PyPI (Python package index) <https://pypi.python.org/pypi/miRge3-build/>`_
->>>>>>> 6d67452e5e8bc085a15770e0d887b14aca214a27
