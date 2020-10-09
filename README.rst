@@ -16,6 +16,6 @@ Links
 -----
 
 * `Documentation <https://mirge-build.readthedocs.io/>`_
-* `Source code <https://github.com/arunhpatil/miRge3_build/>`_
-* `Report an issue <https://github.com/arunhpatil/miRge3_build/issues>`_
+* `Source code <https://github.com/mhalushka/miRge3_build/>`_
+* `Report an issue <https://github.com/mhalushka/miRge3_build/issues>`_
 * `Project page on PyPI (Python package index) <https://pypi.python.org/pypi/miRge-build/>`_
