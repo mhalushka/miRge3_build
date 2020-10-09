@@ -7,7 +7,7 @@ To view command-line parameters type `miRge-build -h`:
     
 usage: miRge-build [options]
 
-miRge-build (Enables building small-RNA libraries for organism of choice to use in miRge3.0 pipeline)
+miRge-build (Enables building small-RNA libraries for an organism of choice to use in the miRge3.0 pipeline)
 optional arguments:
   -h, --help  show this help message and exit
   --version   show program's version number and exit
@@ -33,7 +33,7 @@ Options:
 ```
 
 ## File format options
-Having the right file format is important before making miRge libraries. When dealing with new species which is not available in the set of miRge3.0 libraries, it is important to prioritize what is essential. In other words, general format options is straight forward and faster to build libraries. Novel miRNAs runs scipy cKDTree during library preparation and it consumes lot of computational resources and time. 
+Having the right file format is important before making miRge libraries. When dealing with new species which are not available in the set of miRge3.0 libraries, it is important to prioritize what is essential.  Novel miRNAs runs scipy cKDTree during library preparation and it consumes a lot of computational resources and time depending on the genome size (up to 10 hours). Making a general build without novel miRNA detection is more straight forward and faster to build libraries.
 
 #### General format options ####
 
@@ -87,11 +87,11 @@ miRge uses miRBase or miRGeneDB as the reference database.
  So, it is mandatory to use `-db` option to either `-db miRBase` or `-db miRGeneDB`. Reference miRNA database `-db` and annotation GFF `-agff` files can be found at [miRGeneDB](https://mirgenedb.org/) and [miRBase](http://www.mirbase.org/). 
 
 ##### Name of the organism #####
-miRge-build creats and store all the libraries under the folder which is named after the organism. It is recommended to use a simple name and avoid any special character (use "_" if the name needs to be seperated by space). Example: ` -on human `; ` -on horse `; `-on donkey`; ` -on my_database ` etc.
+miRge-build creates and stores all the libraries under the folder which is named after the organism. It is recommended to use a simple name and avoid any special character (use "_" if the name needs to be seperated by a space). Example: ` -on human `; ` -on horse `; `-on golden_lemur`; ` -on my_database ` etc.
     
 
 ##### Fasta format #####
-Parameters with `-g`, `-mmf`, `-hmf`, `-mtf`, `-ptf`, `-snorf`, `-mrf`, `-spnf` should be in FASTA format as shown below. `-spnf ` or --spike-in is optional if the user is interested in adding additional database with spike-in reads. 
+Parameters with `-g`, `-mmf`, `-hmf`, `-mtf`, `-ptf`, `-snorf`, `-mrf`, `-spnf` should be in FASTA format as shown below. `-spnf ` or --spike-in is optional if the user is interested in adding an additional database with spike-in reads. 
 
 *FASTA Format:*
 
@@ -105,22 +105,22 @@ Ex:
 
 **NOTE:**
 ```
-The Header ID of hairpin miRNA fasta should match mature miRNA fasta file. This is required for accurate isomiR annotation. 
+The Header ID of hairpin miRNA FASTA should match the mature miRNA FASTA file. This is required for accurate isomiR annotation. 
 miRge-build fetches 2bp upstream to 5p and 6bp downstream to 3p mature miRNA from the hairpin miRNA based on the matching ID. 
 Exception: If the mature miRNA name contains XXXX-5p, XXXX-3p, XXXX-[5|3]p*,  XXXX_5p or XXXX_3p where XXXX matches the hairpin miRNA ID. 
-Also, if this is not possible, miRge will not throw any errors, however, proceed with the user provided files.  
+Also, if this is not possible, miRge will not throw any errors, however, and it will proceed with the user provided files.  
 ```
 
 #### Novel miRNA options ####
-Novel miRNA prediction requires genome file (which is provided in the general format) and genome repeats file in GTF format, `-ngrs`. As mentioned previously, novel miRNA analysis consumes lot of computational resources and time.
+Novel miRNA prediction requires the genome file (which is provided in the general format) and genome repeats file in GTF format, `-ngrs`. As mentioned previously, novel miRNA analysis consumes a lot of computational resources and time.
 
 
 #### Custom annotation options ####
 This is **optional**, that two files under the `annotation.Libs` subdirectory requires users input manually. 
 
 ##### \_merges\_ #####
-This file structured as `organism_merges_database.csv` file allows users to define miRNA family for miRNA with similar sequence. 
-Below is the guide to format the file, where `hsa-miR-376b-5p/376c-5p` is the name of the miRNA family seperated by `/` followed by the family members such as `hsa-miR-376b-5p` and `hsa-miR-376c-5p` all seperated by `,`. Next such miRNA family should begin in a new line. Here, four such example is shown below. 
+This file structured as `organism_merges_database.csv` allows users to define a miRNA family for miRNAs with similar sequences. This method is described in detail in the original miRge manuscript (Baras et al Plos One, 2015).
+Below is the guide to format the file, where `hsa-miR-376b-5p/376c-5p` is the name of the miRNA family seperated by `/` followed by the family members such as `hsa-miR-376b-5p` and `hsa-miR-376c-5p` all separated by `,`. The next such miRNA family should begin in a new line. Here, four such examples are shown below. 
 
 ```
 hsa-miR-376b-5p/376c-5p,hsa-miR-376b-5p,hsa-miR-376c-5p
@@ -132,9 +132,9 @@ hsa-miR-3689b-3p/3689c,hsa-miR-3689b-3p,hsa-miR-3689c
 
 ##### \_miRNAs\_in\_repetitive\_element\_ #####
 
-This file structured as `organism_miRNAs_in_repetitive_element_database.csv` file allows users to define miRNA that overlap with repeate elements in the genome. This eliminates miRNA reads to be identified as novel miRNAs or identifying one as A-to-I editing, both of which might be misleading. 
+This file structured as `organism_miRNAs_in_repetitive_element_database.csv` allows users to define miRNAs that overlap with repeat elements in the genome. This eliminates miRNA reads to be identified as novel miRNAs or identifying one as A-to-I editing, both of which might be misleading. 
 
-Below is the guide to format the file, where miRNA name which overlaps with repeate elements are seperated by `,`. The `gene_id` and `transcript_id` of a repeate element should follow the miRNA name. See the example below: 
+Below is the guide to format the file, where miRNA names which overlaps with repeat elements are separated by `,`. The `gene_id` and `transcript_id` of a repeat element should follow the miRNA name. See the example below: 
 
 ```
 hsa-miR-28-5p,gene_id "L2c"; transcript_id "L2c_dup8856";
@@ -146,6 +146,6 @@ hsa-miR-181c-5p,gene_id "MamRTE1"; transcript_id "MamRTE1_dup11";
 
 #### Resources ####
 * The genome repeats can be obtained from [UCSC](https://genome-euro.ucsc.edu/cgi-bin/hgTables)
-* The database sequences for other small RNA could be obtained from [UCSC](https://genome-euro.ucsc.edu/cgi-bin/hgTables) or [Ensembl](http://uswest.ensembl.org/Homo_sapiens/Info/Index)
+* The database sequences for other small RNA can be obtained from [UCSC](https://genome-euro.ucsc.edu/cgi-bin/hgTables) or [Ensembl](http://uswest.ensembl.org/Homo_sapiens/Info/Index)
 * [Bowtie-v1.2.3](https://sourceforge.net/projects/bowtie-bio/files/bowtie/1.2.3) - please pick one based on your OS.
 
