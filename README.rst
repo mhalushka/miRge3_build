@@ -2,7 +2,7 @@
 miRge-build
 ==============
 
-Enables building small-RNA libraries for the organism of choice to use in miRge pipeline.
+Enables building small-RNA libraries for the organism of choice to use in the miRge pipeline.
 
 Update: package migration to python3.8
 ######################################
