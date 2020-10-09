@@ -4,7 +4,7 @@ with open("README.rst", "r") as fh:
     long_description = fh.read()
 
 setup(
-        name='miRge3-build',
+        name='miRge-build',
         version='0.0.1',
         author='Arun Patil and Marc Halushka',
         author_email='mhalush1@jhmi.edu',
@@ -14,7 +14,7 @@ setup(
         keywords=['miRge-build', 'small RNA analysis', 'NGS', 'bioinformatics tools'],  
         license='MIT',
         package_dir={'mirge_build':'mirge_build'},
-        install_requires=['biopython==1.77','scikit-learn==0.23.1','scipy==1.4.1']
+        install_requires=['biopython==1.77','scikit-learn==0.23.1','scipy==1.4.1'],
         packages=find_packages(),
         entry_points={'console_scripts': ['miRge-build = mirge_build.__main__:main']},
         classifiers=[
