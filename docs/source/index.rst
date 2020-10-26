@@ -7,8 +7,8 @@ Table of contents
 .. toctree::
    :maxdepth: 2
    
-   installation
+   installation.rst
    quick_start.md
-   license
+   license.rst
 
 
