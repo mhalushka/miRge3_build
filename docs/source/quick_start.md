@@ -3,6 +3,7 @@
 ## Parameters
 
 To view command-line parameters type `miRge-build -h`:
+
 ```
 usage: miRge-build [options]
 
