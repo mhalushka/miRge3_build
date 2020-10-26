@@ -10,7 +10,7 @@ usage: miRge-build [options]
 miRge-build (Enables building small-RNA libraries for an organism of choice to use in the miRge3.0 pipeline)
 optional arguments:
   -h, --help  show this help message and exit
-  --version   show program&sbquo;s version number and exit
+  --version   show program's version number and exit
 
 Options:
   -g,     --genome             genome file in fasta format (.fna, .fasta or .fa) (Required)
@@ -28,7 +28,7 @@ Options:
   -db,    --mir-DB             name of the database to be used (Options: miRBase, miRGeneDB) (Required)
   -on,    --organism-name      name of the organism [Note: name should be one word and use "_" as separator if necessary] (Required)
   -cpu,   --threads            the number of processors to use for trimming, qc, and alignment (Default: 1)
-  -pbwt,  --bowtie-path        path to system&sbquo;s directory containing bowtie binary (Required if bowtie is not in the environment path)
+  -pbwt,  --bowtie-path        path to system's directory containing bowtie binary (Required if bowtie is not in the environment path)
   
 ```
 
